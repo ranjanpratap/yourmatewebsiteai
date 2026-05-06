@@ -104,6 +104,14 @@
   }
 }
 
+@media (max-width: 767px) {
+  :root { --glass-blur: blur(10px) saturate(150%); }
+  .section-pad {
+    padding-top: clamp(60px, 10vw, 160px);
+    padding-bottom: clamp(60px, 10vw, 160px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

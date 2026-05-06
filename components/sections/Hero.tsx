@@ -47,7 +47,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden section-pad"
+      className="relative min-h-[100dvh] flex items-center overflow-hidden section-pad"
     >
       <HeroBackground />
 
@@ -107,15 +107,15 @@ export default function Hero() {
 
             {/* Buttons Row */}
             <motion.div
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10 md:mb-16"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 mb-10 md:mb-16 w-full sm:w-auto"
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.1 }}
             >
               <motion.a
                 href="#waitlist"
-                className="px-8 py-4 text-bg-base font-bold rounded-full shadow-lg hover:shadow-white/10 transition-all flex items-center gap-2"
-                style={{ background: '#fefefe' }}
+                className="px-8 py-4 text-bg-base font-bold rounded-full shadow-lg hover:shadow-white/10 transition-all flex items-center justify-center gap-2"
+                style={{ background: '#fefefe', minHeight: 52 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -124,8 +124,8 @@ export default function Hero() {
 
               <motion.a
                 href="#demo"
-                className="px-8 py-4 bg-white/5 border border-white/10 text-white font-semibold rounded-full hover:bg-white/10 transition-all flex items-center gap-2"
-                style={{ color: '#fefefe' }}
+                className="px-8 py-4 bg-white/5 border border-white/10 text-white font-semibold rounded-full hover:bg-white/10 transition-all flex items-center justify-center gap-2"
+                style={{ color: '#fefefe', minHeight: 52 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -152,12 +152,12 @@ export default function Hero() {
           {/* ── RIGHT: PHONE MOCKUP ── */}
           <div className="w-full lg:flex-1 flex justify-center lg:justify-end">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9, x: 50 }}
+              initial={{ opacity: 0, scale: 0.9, x: 0 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.6 }}
               onMouseEnter={stopCycle}
               onMouseLeave={startCycle}
-              className="relative"
+              className="relative max-w-[270px] sm:max-w-[300px] md:max-w-none w-full"
             >
               {/* Outer Glow behind phone */}
               <div className="absolute inset-0 -m-20 bg-purple-500/10 blur-[100px] rounded-full" />

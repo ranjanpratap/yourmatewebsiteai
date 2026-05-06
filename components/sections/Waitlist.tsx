@@ -129,7 +129,7 @@ export default function Waitlist() {
                 <motion.form
                   key="form"
                   onSubmit={handleSubmit}
-                  className="glass-strong flex items-center p-2 rounded-full"
+                  className="glass-strong flex flex-col md:flex-row gap-2 p-2 rounded-3xl md:rounded-full"
                 >
                   <input
                     type="email"
@@ -137,14 +137,14 @@ export default function Waitlist() {
                     onChange={e => setEmail(e.target.value)}
                     placeholder="you@awesome.com"
                     required
-                    className="flex-1 bg-transparent outline-none px-4 py-2 text-sm"
-                    style={{ color: 'var(--text-primary)', fontSize: 15 }}
+                    className="flex-1 bg-transparent outline-none px-4 py-3 md:py-2 text-sm rounded-2xl md:rounded-full"
+                    style={{ color: 'var(--text-primary)', fontSize: 15, minHeight: 52 }}
                   />
                   <motion.button
                     type="submit"
                     disabled={status === 'loading'}
-                    className="cta-gradient-bg text-white font-semibold text-xs sm:text-sm px-3 sm:px-6 py-3 rounded-full flex-shrink-0 disabled:opacity-70 whitespace-nowrap"
-                    style={{ boxShadow: '0 0 20px rgba(255,139,60,0.3)' }}
+                    className="cta-gradient-bg text-white font-semibold text-sm px-6 py-4 md:py-3 rounded-2xl md:rounded-full flex-shrink-0 disabled:opacity-70 whitespace-nowrap w-full md:w-auto"
+                    style={{ boxShadow: '0 0 20px rgba(255,139,60,0.3)', minHeight: 52 }}
                     whileHover={{ scale: 1.03, boxShadow: '0 0 30px rgba(255,139,60,0.4)' }}
                     whileTap={{ scale: 0.97 }}
                   >
