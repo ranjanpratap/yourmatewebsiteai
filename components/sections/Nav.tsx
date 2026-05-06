@@ -25,8 +25,13 @@ export default function Nav() {
         style={{ scale, maxWidth: 1100, width: 'calc(100% - 32px)' }}
       >
         <motion.div
-          className="glass flex items-center justify-between px-4 py-2.5 rounded-full"
-          style={{ backdropFilter: `blur(${blur}px) saturate(180%)` } as React.CSSProperties}
+          className="flex items-center justify-between px-4 py-2.5 rounded-full shadow-2xl"
+          style={{ 
+            background: 'linear-gradient(90deg, rgba(20, 10, 30, 0.85) 0%, rgba(10, 4, 16, 0.85) 100%)',
+            border: '1px solid rgba(255, 255, 255, 0.12)',
+            boxShadow: '0 16px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
+            backdropFilter: `blur(${blur}px) saturate(180%)` 
+          } as React.CSSProperties}
         >
           {/* Left — logo + wordmark */}
           <a href="#" className="flex items-center gap-2">

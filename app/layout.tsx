@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${poppins.variable} ${jetbrainsMono.variable}`}>
-      <body className="bg-[#0A0410] text-white overflow-x-hidden">
+      <body className="bg-[#0A0410] text-white overflow-x-clip">
         <NoiseOverlay />
         <CursorGlow />
         {children}

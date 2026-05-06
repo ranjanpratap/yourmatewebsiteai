@@ -96,30 +96,30 @@ export default function Founder() {
 
           {/* Right - Bio */}
           <motion.div
-            className="flex-1"
+            className="flex-1 text-center lg:text-left"
             variants={fadeUpVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h2 className="font-bold mb-2" style={{ fontSize: 'clamp(28px, 5vw, 64px)', fontWeight: 700, letterSpacing: '-0.025em' }}>
+            <h2 className="font-bold mb-4 lg:mb-2 mx-auto lg:mx-0 leading-[1.1] lg:leading-tight" style={{ fontSize: 'clamp(36px, 6vw, 64px)', fontWeight: 700, letterSpacing: '-0.025em' }}>
               Built by one.<br />
               <span className="brand-gradient-text">For all of us.</span>
             </h2>
 
-            <div className="mt-2 mb-4">
-              <p className="text-2xl font-bold">Pratap Ranjan</p>
-              <p style={{ color: 'var(--text-secondary)', fontSize: 16 }}>Founder & Architect of Mate</p>
+            <div className="mt-2 mb-6 lg:mb-4 mx-auto lg:mx-0">
+              <p className="text-xl lg:text-2xl font-bold">Pratap Ranjan</p>
+              <p className="text-[14px] lg:text-[16px] mt-0.5" style={{ color: 'var(--text-secondary)' }}>Founder & Architect of Mate</p>
             </div>
 
-            <p style={{ fontSize: 'clamp(15px, 4vw, 18px)', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '1rem' }}>
+            <p className="mx-auto lg:mx-0" style={{ fontSize: 'clamp(15px, 4vw, 18px)', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '1rem' }}>
               &ldquo;I built YourMate because I lived the problem. I tried every fitness app, every habit tracker, every journaling tool — and none of them stuck. They counted my steps. They didn&apos;t care if I took them.
             </p>
-            <p style={{ fontSize: 'clamp(15px, 4vw, 18px)', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '2rem' }}>
+            <p className="mx-auto lg:mx-0" style={{ fontSize: 'clamp(15px, 4vw, 18px)', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '2rem' }}>
               YourMate is the app I needed at 2am on a bad day. It&apos;s the friend I wished checked in when I skipped the gym. I&apos;m building it for everyone who&apos;s tried to change — and almost made it.&rdquo;
             </p>
 
-            <div className="flex gap-3">
+            <div className="flex justify-center lg:justify-start gap-3">
               <motion.a
                 href="https://www.linkedin.com/in/pratap-ranjan-2945271a5"
                 target="_blank"

@@ -42,6 +42,20 @@ export default function Hero() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  const [phoneWidth, setPhoneWidth] = useState(320)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 380) setPhoneWidth(250)
+      else if (window.innerWidth < 640) setPhoneWidth(280)
+      else if (window.innerWidth < 1024) setPhoneWidth(300)
+      else setPhoneWidth(320)
+    }
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   const CurrentScreen = SCREENS[index]
 
   return (
@@ -51,7 +65,7 @@ export default function Hero() {
     >
       <HeroBackground />
 
-      <div className="container-pad relative z-10 w-full">
+      <div className="container-pad relative z-10 w-full pt-24 lg:pt-0">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-14 lg:gap-8">
 
           {/* ── LEFT: TEXT CONTENT ── */}
@@ -135,15 +149,15 @@ export default function Hero() {
 
             {/* Bottom Value Row */}
             <motion.div
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-x-5 md:gap-x-8 gap-y-3"
+              className="flex flex-col lg:flex-row flex-wrap items-center justify-center lg:justify-start gap-y-3 lg:gap-y-0 lg:gap-x-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 1.4 }}
             >
               {['PRIVATE BY DEFAULT', 'MEMORY THAT MATTERS', 'CONTEXT OVER COMMANDS'].map((item, i) => (
-                <div key={item} className="flex items-center gap-8">
-                  <span className="eyebrow !text-white/20 !mb-0">{item}</span>
-                  {i < 2 && <div className="w-1 h-1 rounded-full bg-white/10" />}
+                <div key={item} className="flex items-center gap-0 lg:gap-8">
+                  <span className="eyebrow !text-white/20 !mb-0 text-center">{item}</span>
+                  {i < 2 && <div className="hidden lg:block w-1 h-1 rounded-full bg-white/10" />}
                 </div>
               ))}
             </motion.div>
@@ -157,12 +171,12 @@ export default function Hero() {
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.6 }}
               onMouseEnter={stopCycle}
               onMouseLeave={startCycle}
-              className="relative max-w-[270px] sm:max-w-[300px] md:max-w-none w-full"
+              className="relative max-w-[270px] sm:max-w-[300px] md:max-w-none w-full lg:translate-x-12 xl:translate-x-24"
             >
               {/* Outer Glow behind phone */}
               <div className="absolute inset-0 -m-20 bg-purple-500/10 blur-[100px] rounded-full" />
               
-              <PhoneFrame width={320}>
+              <PhoneFrame width={phoneWidth}>
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={index}

@@ -395,7 +395,7 @@ export default function ReelsSection() {
                 href="https://www.instagram.com/pratapranjan.ai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group/btn relative px-8 py-4 rounded-full overflow-hidden flex items-center gap-3 transition-all active:scale-95"
+                className="group/btn relative px-5 py-3.5 md:px-8 md:py-4 rounded-full overflow-hidden flex items-center gap-2 md:gap-3 transition-all active:scale-95"
                 style={{ 
                   background: 'linear-gradient(to right, #FF8B3C, #A855F7)',
                   boxShadow: '0 8px 32px -8px rgba(255,139,60,0.5)'
@@ -403,15 +403,15 @@ export default function ReelsSection() {
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="flex items-center gap-2">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white md:w-5 md:h-5">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                     <circle cx="12" cy="12" r="4"/>
                     <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
                   </svg>
-                  <span className="text-white font-bold text-lg">Follow on Instagram</span>
+                  <span className="text-white font-bold text-[15px] sm:text-lg whitespace-nowrap">Follow on Instagram</span>
                 </div>
                 <motion.span
-                  className="text-white"
+                  className="text-white ml-1 md:ml-0"
                   animate={{ x: [0, 4, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                 >
@@ -422,7 +422,7 @@ export default function ReelsSection() {
               <a 
                 href="https://www.instagram.com/pratapranjan.ai" 
                 target="_blank" 
-                className="text-[#fefefe]/30 hover:text-[#fefefe]/60 transition-colors text-sm font-medium flex items-center gap-2 group/handle"
+                className="text-[#fefefe]/30 hover:text-[#fefefe]/60 transition-colors text-[13px] md:text-sm font-medium flex items-center gap-2 group/handle mt-1"
               >
                 @pratapranjan.ai <span className="text-xs transition-transform group-hover/handle:translate-x-1 group-hover/handle:-translate-y-1">↗</span>
               </a>
@@ -431,10 +431,10 @@ export default function ReelsSection() {
         </div>
 
         {/* Mission Tagline */}
-        <div className="mt-12 text-center">
-          <p className="text-[#fefefe]/60 font-medium flex items-center justify-center gap-2 text-base">
-            <Sparkles size={16} className="text-orange-400" />
-            30 days. One mission. Building <span className="brand-gradient-text font-bold">YourMate.</span>
+        <div className="mt-12 text-center overflow-hidden">
+          <p className="text-[#fefefe]/60 font-medium flex items-center justify-center gap-1.5 md:gap-2 text-[13px] sm:text-base whitespace-nowrap">
+            <Sparkles size={16} className="text-orange-400 shrink-0" />
+            <span>30 days. One mission. Building <span className="brand-gradient-text font-bold">YourMate.</span></span>
           </p>
         </div>
       </motion.div>
